@@ -6,7 +6,15 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "docker:build": "docker build -t octobid-web .",
+    "docker:build-dev": "docker build -f Dockerfile.dev -t octobid-web-dev .",
+    "docker:run": "docker run -p 3000:3000 octobid-web",
+    "docker:run-dev": "docker run -p 3000:3000 -v .:/app -v /app/node_modules octobid-web-dev",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f octobid-web",
+    "docker:dev": "docker-compose -f docker-compose.dev.yml up"
   },
   "dependencies": {
     "next": "15.5.6",

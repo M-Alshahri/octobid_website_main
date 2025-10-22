@@ -1,0 +1,21 @@
+services:
+  # Production service
+  octobid-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - NEXT_TELEMETRY_DISABLED=${NEXT_TELEMETRY_DISABLED}
+      - PORT=${PORT}
+      - HOSTNAME=${HOSTNAME}
+    restart: unless-stopped
+    networks:
+      - octobid-network
+networks:
+  octobid-network:
+    driver: bridge

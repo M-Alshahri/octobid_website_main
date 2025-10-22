@@ -1,0 +1,26 @@
+services:
+  octobid-web-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=${NEXT_TELEMETRY_DISABLED}
+      - PORT=${PORT}
+      - HOSTNAME=${HOSTNAME}
+    networks:
+      - octobid-network
+    stdin_open: true
+    tty: true
+
+networks:
+  octobid-network:
+    driver: bridge
