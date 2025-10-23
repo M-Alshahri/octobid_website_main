@@ -4,14 +4,14 @@ import Feature from "./Feature";
 
 export default function UserSection() {
   return (
-    <section id="user" className="bg-white font-poppins py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row items-center justify-center">
-          {/* Phone mockup - you'll add the actual image here */}
+    <section id="user" className="bg-white font-poppins ">
+      
+        <div className="flex flex-col sm:flex-row items-center justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-24 ">
+          {/* Left Content */}
 
           <div className="hidden lg:block  z-50">
             <Image
-              src="/images/for_users_section_image.svg"
+              src="/images/users_phone_mokup.png"
               alt="User Section Phone Mockup"
               width={800}
               height={1200}
@@ -68,7 +68,7 @@ export default function UserSection() {
             </div>
           </div>
         </div>
-      </div>
+  
     </section>
   );
 }
