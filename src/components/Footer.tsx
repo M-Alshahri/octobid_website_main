@@ -3,17 +3,17 @@ import Link from "next/link";
 
 const Footer = () => {
   const aboutLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Features", href: "/features" },
-    { name: "Users", href: "/users" },
-    { name: "Testimonials", href: "/testimonials" },
+    { name: "About Us", href: "/" },
+    { name: "Features", href: "#features" },
+    { name: "Users", href: "#user" },
+    { name: "Testimonials", href: "#testimonials" },
   ];
 
     const companyLinks = [
-      { name: "Our Team", href: "/team" },
+      { name: "Our Team", href: "/" },
       { name: "Terms & Condition", href: "/terms" },
       { name: "FAQ", href: "#faqs" },
-      { name: "Hospitals", href: "/hospitals" },
+      { name: "Hospitals", href: "/" },
     ];
 
   const socialLinks = [

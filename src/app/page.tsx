@@ -1,7 +1,10 @@
-
 import ConnectWithSuppliers from "@/components/ConnectWithSuppliers/ConnectWithSuppliers";
+import FAQs from "@/components/FAQs/FAQs";
+import Features from "@/components/Features/Features";
 import Hero from "@/components/Hero/Hero";
+import OrderManagement from "@/components/OrderManagement/OrderManagement";
 import SupplierSection from "@/components/SupplierSection/SupplierSection";
+import Testimonials from "@/components/Testimonials/Testimonials";
 import UserSection from "@/components/UserSection/UserSection";
 
 export default function Home() {
@@ -29,32 +32,17 @@ export default function Home() {
         ]}
       />
 
-
-      
+      {/* Order Management Section */}
+      <OrderManagement />
 
       {/* Features Section */}
-      <section
-        id="features"
-        className="min-h-screen flex flex-col items-center justify-center p-8 bg-white"
-      >
-        <h1>Platform Features</h1>
-      </section>
+      <Features />
 
       {/* Testimonial Section */}
-      <section
-        id="testimonial"
-        className="min-h-screen flex flex-col items-center justify-center p-8 bg-gray-50"
-      >
-        <h1>What Our Users Say</h1>
-      </section>
+      <Testimonials />
 
       {/* FAQs Section */}
-      <section
-        id="faqs"
-        className="min-h-screen flex flex-col items-center justify-center p-8 bg-white"
-      >
-        <h1>Frequently Asked Questions</h1>
-      </section>
+      <FAQs />
     </div>
   );
 }
