@@ -1,20 +1,23 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = async () => {
+  const t = await getTranslations("footer");
+
   const aboutLinks = [
-    { name: "About Us", href: "/" },
-    { name: "Features", href: "#features" },
-    { name: "Users", href: "#user" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: t("about.aboutUs"), href: "/" },
+    { name: t("about.ourStory"), href: "/" },
+    { name: t("about.careers"), href: "/" },
+    { name: t("about.blog"), href: "/" },
   ];
 
-    const companyLinks = [
-      { name: "Our Team", href: "/" },
-      { name: "Terms & Condition", href: "/terms" },
-      { name: "FAQ", href: "#faqs" },
-      { name: "Hospitals", href: "/" },
-    ];
+  const companyLinks = [
+    { name: t("company.ourTeam"), href: "/" },
+    { name: t("company.contactUs"), href: "/" },
+    { name: t("company.termsConditions"), href: "/terms" },
+    { name: t("company.faq"), href: "#faqs" },
+  ];
 
   const socialLinks = [
     {
@@ -58,8 +61,7 @@ const Footer = () => {
               <span className="text-xl font-bold font-poppins">Octobid</span>
             </div>
             <p className=" text-lg leading-relaxed mb-10 max-w-xs">
-              With Octobid, hospitals can buy and manage products, order
-              packages, join co-buying opportunities.
+              {t("description")}
             </p>
 
             {/* Social Media Links */}
@@ -85,7 +87,7 @@ const Footer = () => {
 
           {/* About Links */}
           <div className="flex flex-col">
-            <h3 className="text-lg font-bold mb-12">About</h3>
+            <h3 className="text-lg font-bold mb-12">{t("about.title")}</h3>
             <ul className="space-y-6">
               {aboutLinks.map((link) => (
                 <li key={link.name}>
@@ -102,7 +104,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div className="flex flex-col">
-            <h3 className="text-lg font-bold mb-12">Company</h3>
+            <h3 className="text-lg font-bold mb-12">{t("company.title")}</h3>
             <ul className="space-y-6">
               {companyLinks.map((link) => (
                 <li key={link.name}>
@@ -119,32 +121,24 @@ const Footer = () => {
 
           {/* Contact Us */}
           <div className="flex flex-col">
-            <h3 className="text-lg font-bold mb-12">Contact Us</h3>
-          
-              <ul className="space-y-6">
-                {addressData.map((line, index) => (
-                  <li key={index}>{line}</li>
-                ))}
-              </ul>
-             
-           
+            <h3 className="text-lg font-bold mb-12">{t("contactUs.title")}</h3>
+
+            <ul className="space-y-6">
+              {addressData.map((line, index) => (
+                <li key={index}>{line}</li>
+              ))}
+            </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-[#EAF2FF]/65 mt-13 pt-8 flex flex-col md:flex-row justify-between items-center pr-16">
-          <p className=" text-lg font-geist-sans">
-            Copyright @2025 Octobid | All rights reserved.
-          </p>
+        {/* <div className="border-t border-[#EAF2FF]/65 mt-13 pt-8 flex flex-col md:flex-row justify-between items-center pr-16">
+          <p className=" text-lg font-geist-sans">{t("copyright")}</p>
           <div className="flex items-center space-x-2 mt-4 md:mt-0">
-            <span className=" text-lg font-geist-sans">
-              Designed by
-            </span>
-            <span className=" text-lg font-geist-sans font-bold">
-              Octobid
-            </span>
+            <span className=" text-lg font-geist-sans">Designed by</span>
+            <span className=" text-lg font-geist-sans font-bold">Octobid</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

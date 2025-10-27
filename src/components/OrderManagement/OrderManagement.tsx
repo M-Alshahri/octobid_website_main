@@ -1,14 +1,13 @@
 import { RiDashboardLine } from "react-icons/ri";
 
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa6";
 
-export default function OrderManagement() {
+export default async function OrderManagement() {
+  const t = await getTranslations("orderManagement");
   return (
     <section className="relative bg-white font-poppins">
-
-
-   
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-center ">
           {/* Left Content */}
@@ -20,23 +19,18 @@ export default function OrderManagement() {
                 <RiDashboardLine className="w-4 h-4" />
               </div>
               <span className="text-black font-semibold text-sm">
-                Dashboard
+                {t("badge")}
               </span>
             </div>
 
             {/* Heading */}
             <div className="space-y-4 text-3xl lg:text-4xl xl:text-5xl font-semibold text-black leading-tight font-poppins">
-              <h2>
-                Managing order is
-                <br />
-                <span>Easy!</span>
-              </h2>
+              <h2>{t("title")}</h2>
             </div>
 
             {/* Description */}
             <p className="text-lg text-[#6B7280] leading-relaxed max-w-lg font-geist-sans">
-              Track And Manage Your Hospital&apos;s Procurement Process With
-              Tools Designed For Efficiency And Reliability.
+              {t("description")}
             </p>
 
             {/* Features List */}
@@ -48,7 +42,7 @@ export default function OrderManagement() {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 ">
-                    Streamlined Order Management.
+                    {t("features.streamlined")}
                   </h3>
                 </div>
               </div>
@@ -60,7 +54,7 @@ export default function OrderManagement() {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">
-                    Access To A Wide Range Of Medical Products.
+                    {t("features.access")}
                   </h3>
                 </div>
               </div>
@@ -72,9 +66,7 @@ export default function OrderManagement() {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">
-                    Customized Purchasing Options
-                    <br />
-                    (Bid, Package, Or Co-Buying).
+                    {t("features.customized")}
                   </h3>
                 </div>
               </div>
@@ -86,7 +78,7 @@ export default function OrderManagement() {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">
-                    Real-Time Updates And Detailed Tracking.
+                    {t("features.realtime")}
                   </h3>
                 </div>
               </div>
@@ -96,7 +88,6 @@ export default function OrderManagement() {
           {/* Dashboard Container */}
           <div className="relative max-w-lg w-150 h-150">
             {/* glow background */}
-          
 
             <Image
               src="/images/analytics.png"

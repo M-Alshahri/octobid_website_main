@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
 
@@ -13,6 +14,7 @@ export default function ConnectWithSuppliersSection({
   logoSrc,
   ringIcons,
 }: PageProps) {
+  const t = useTranslations("connectWithSuppliers");
   // Absolute positions for the 5 orbiting icons (responsive safe areas)
   // Each item: [left%, top%] within the ring wrapper.
   const positions: [number, number][] = [
@@ -48,7 +50,7 @@ export default function ConnectWithSuppliersSection({
                 <IoCartOutline className="w-5  h-5 text-white" />
               </div>
               <span className="text-black font-semibold text-sm">
-                Order with Delivery
+                {t("badge")}
               </span>
             </div>
 
@@ -57,13 +59,12 @@ export default function ConnectWithSuppliersSection({
               id="connect-suppliers-title"
               className="text-center text-[clamp(28px,4vw,38px)] font-semibold tracking-tight text-slate-900"
             >
-              CONNECT WITH <span className="inline-block w-2" /> SUPPLIERS
+              {t("title")}
             </h2>
 
             {/* Subheading */}
             <p className="mx-auto mt-3 max-w-[46ch] text-center text-[15px] leading-6 text-slate-600">
-              Order from trusted suppliers that support your hospital&apos;s
-              procurement needs.
+              {t("description")}
             </p>
           </div>
           <div className="ml-5 sm:ml-20">

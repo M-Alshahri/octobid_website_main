@@ -11,7 +11,12 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
-        poppins: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        poppins: [
+          "var(--font-poppins)",
+          "Poppins Local",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       colors: {
         background: "var(--background)",

@@ -1,19 +1,21 @@
-'use client';
-
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
+"use client";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = useTranslations("navigation");
 
   const navigationItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'User', href: '#user' },
-    { name: 'Supplier', href: '#supplier' },
-    { name: 'Features', href: '#features' },
-    { name: 'Testimonial', href: '#testimonials' },
-    { name: 'FAQs', href: '#faqs' },
+    { name: t("home"), href: "#home" },
+    { name: t("user"), href: "#user" },
+    { name: t("supplier"), href: "#supplier" },
+    { name: t("features"), href: "#features" },
+    { name: t("testimonial"), href: "#testimonial" },
+    { name: t("faqs"), href: "#faqs" },
   ];
 
   return (
@@ -49,13 +51,14 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button - Always visible */}
+          {/* CTA Button and Language Switcher */}
           <div className="flex items-center space-x-2">
+            <LanguageSwitcher />
             <Link
               href="/get-app"
               className="bg-[#284A9A] text-white px-3 sm:px-4 xl:px-6 py-2 rounded-sm text-sm font-medium hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap"
             >
-              Get the App
+              {t("getTheApp")}
             </Link>
 
             {/* Mobile menu button - Show only on small screens */}

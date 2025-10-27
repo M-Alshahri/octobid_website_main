@@ -4,48 +4,45 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { BsQuestionLg } from "react-icons/bs";
 import SectionTopPart from "../SectionTopPart";
 
-const faqData = [
-  {
-    question: "What is Octobid",
-    answer:
-      "Octobid is a B2B platform designed to streamline the buying and selling of medical equipment and supplies. It connects suppliers directly with hospitals and healthcare providers, making the procurement process more efficient and transparent.",
-  },
-  {
-    question: "Who is the target audience?",
-    answer:
-      "Our primary target audience includes hospitals, healthcare providers, medical suppliers, and procurement professionals in the healthcare industry who are looking for efficient ways to buy and sell medical equipment and supplies.",
-  },
-  {
-    question: "What are the unique selling points of the product?",
-    answer:
-      "Octobid offers verified suppliers, flexible buying options (individual products, packages, or co-buying), smart management tools, faster sourcing, and a streamlined procurement process that saves time and money for healthcare organizations.",
-  },
-  {
-    question: "How does co-buying work?",
-    answer:
-      "Co-buying allows multiple healthcare organizations to combine their purchasing power to get better prices on medical supplies. Organizations can join existing co-buying groups or create new ones, sharing costs and benefiting from bulk pricing discounts.",
-  },
-];
+export default async function FAQs() {
+  const t = await getTranslations("faqs");
 
-export default function FAQs() {
+  const faqData = [
+    {
+      question: t("items.whatIs.question"),
+      answer: t("items.whatIs.answer"),
+    },
+    {
+      question: t("items.targetAudience.question"),
+      answer: t("items.targetAudience.answer"),
+    },
+    {
+      question: t("items.uniquePoints.question"),
+      answer: t("items.uniquePoints.answer"),
+    },
+    {
+      question: t("items.coBuying.question"),
+      answer: t("items.coBuying.answer"),
+    },
+  ];
   return (
     <section
       className="relative flex flex-col items-center justify-center  "
       id="faqs"
-    
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 py-20 sm:py-24 text-center max-w-7xl mx-auto">
         <div className="flex flex-col items-center justify-center bg-[url('/images/bg_gradient1.svg')]  bg-position-[-10rem_bottom_-10rem] bg-cover bg-no-repeat ">
           <SectionTopPart
             icon={<BsQuestionLg className="w-5 h-5 text-white" />}
-            title1="FAQs"
-            title2="Got Questions"
-            description1="A spotlight on the most valued question"
-            description2="from our audience."
+            title1={t("badge")}
+            title2={t("title")}
+            description1={t("description")}
+            description2=""
           />
 
           {/* Main Content Grid */}
@@ -59,22 +56,21 @@ export default function FAQs() {
                   <BsQuestionLg className="w-4 h-4 text-[#999CA1]" />
                 </div>
                 <span className="text-black font-semibold text-sm">
-                  {" "}
-                  Faq Hub
+                  {t("hubBadge")}
                 </span>
               </div>
 
               {/* Still Have Questions */}
               <h3 className="text-2xl font-bold text-black mb-4">
-                Still Have Questions?
+                {t("stillHaveQuestions")}
               </h3>
 
               {/* Contact Us Link */}
               <p className="text-gray-600 mb-8">
                 <span className="underline font-medium cursor-pointer hover:text-blue-600">
-                  Contact Us
+                  {t("contactUs")}
                 </span>
-                . We are happy to help you
+                {t("contactDescription")}
               </p>
 
               {/* Octobid Logo and Mockups */}
@@ -102,7 +98,7 @@ export default function FAQs() {
 
               {/* Get the App Button */}
               <button className="w-full h-11 bg-[#284A9A] text-white font-semibold text-lg  rounded-xl hover:bg-[#284A9A]/70 transition-colors text-center">
-                Get the App
+                {t("getTheApp")}
               </button>
             </div>
 

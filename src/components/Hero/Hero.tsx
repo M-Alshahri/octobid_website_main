@@ -1,15 +1,15 @@
 import StatisticsElement from "@/components/Hero/StatisticsElement";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { FaApple, FaStar } from "react-icons/fa";
 
-export default function Hero() {
+export default async function Hero() {
+  const t = await getTranslations("hero");
   return (
     <section
       id="home"
       className="bg-white font-poppins relative overflow-hidden"
     >
-    
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 bg-[url('/images/bg_gradient4.svg')]  bg-position-[center_center] bg-cover bg-no-repeat">
         <div className="grid lg:grid-cols-2 gap-12 items-center py-16">
           {/* Left Content */}
@@ -20,10 +20,7 @@ export default function Hero() {
             {/* Main Heading */}
             <div className="space-y-6">
               <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-900 leading-tight">
-                <span className="font-poppins">Smarter Sourcing Starts</span>
-                <br />
-                <span className="font-poppins">with What You </span>
-                <span className="text-[#284A9A]">Need</span>
+                {t("title")}
               </h1>
 
               {/* Blue underline */}
@@ -32,8 +29,7 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-lg text-gray-600 leading-relaxed max-w-lg font-geist-sans">
-              Want to access trusted suppliers? With Octobid, hospitals can buy
-              and manage products, order packages, join co-buying opportunities,
+              {t("description")}
             </p>
 
             {/* App Store Buttons */}
@@ -49,7 +45,7 @@ export default function Hero() {
                 <div>
                   <div className="text-xs text-gray-400">Download on the</div>
                   <div className="text-sm font-semibold text-gray-900">
-                    Google Play
+                    {t("googlePlay")}
                   </div>
                 </div>
               </div>
@@ -60,7 +56,7 @@ export default function Hero() {
                 <div>
                   <div className="text-xs text-gray-400">Download on the</div>
                   <div className="text-sm font-semibold text-gray-900">
-                    Apple Store
+                    {t("appStore")}
                   </div>
                 </div>
               </div>
@@ -91,7 +87,7 @@ export default function Hero() {
                     <FaStar key={index} className="w-6 h-6 text-[#EAF2FF]" />
                   ))}
                 </div>
-                <p className=" text-lg text-black">4.9 stars over 1.2k rated</p>
+                <p className=" text-lg text-black">{t("rating")}</p>
               </div>
             </div>
           </div>
@@ -110,23 +106,10 @@ export default function Hero() {
         {/* Statistics Section */}
         <div className="py-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center">
-            <StatisticsElement
-              text1="115+"
-              text2="Active Hospitals"
-        
-            />
-            <StatisticsElement
-              text1="88k+"
-              text2="Orders placed"
-            />
-            <StatisticsElement
-              text1="30%"
-              text2="Growth in sales"
-            />
-            <StatisticsElement
-              text1="&gt;800"
-              text2="Trusted suppliers"
-            />
+            <StatisticsElement text1="115+" text2={t("statistics.hospitals")} />
+            <StatisticsElement text1="88k+" text2={t("statistics.orders")} />
+            <StatisticsElement text1="30%" text2={t("statistics.products")} />
+            <StatisticsElement text1=">800" text2={t("statistics.suppliers")} />
           </div>
         </div>
       </div>

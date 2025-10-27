@@ -1,0 +1,242 @@
+{
+  "navigation": {
+    "home": "Home",
+    "user": "For Users",
+    "supplier": "For Suppliers",
+    "features": "Features",
+    "testimonial": "Testimonials",
+    "faqs": "FAQs",
+    "getTheApp": "Get the App"
+  },
+  "hero": {
+    "badge": "For Users",
+    "title": "Source and manage with Octobid",
+    "description": "A B2B platform designed to streamline the buying and selling of medical equipment and supplies.",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
+    "rating": "Excellent Rating",
+    "statistics": {
+      "hospitals": "Hospitals",
+      "suppliers": "Suppliers",
+      "products": "Products",
+      "orders": "Orders"
+    }
+  },
+  "userSection": {
+    "badge": "For User",
+    "title": "Source and manage with Octobid",
+    "features": {
+      "signup": {
+        "title": "Sign Up",
+        "description": "Create an account to access a marketplace built for hospitals and healthcare providers."
+      },
+      "buyManage": {
+        "title": "Buy & Manage Products",
+        "description": "Access a wide range of medical products, packages, and co-buying opportunities from trusted suppliers."
+      },
+      "request": {
+        "title": "Request Products",
+        "description": "Can't find what you need? Request unavailable products, and Octobid connects you with suppliers."
+      },
+      "monitor": {
+        "title": "Monitor Your Orders",
+        "description": "Track and manage your purchases, co-buying contributions, and package deliveries in one place."
+      }
+    }
+  },
+  "supplierSection": {
+    "badge": "For Suppliers",
+    "title": "Expand your customer network with Octobid",
+    "features": {
+      "showcase": {
+        "title": "Showcase Your Products",
+        "description": "Display your medical product range to a wide network of hospitals and healthcare providers."
+      },
+      "manage": {
+        "title": "Manage Bids & Auctions",
+        "description": "Efficient management of bids, auctions, and orders with tools designed for suppliers."
+      },
+      "connect": {
+        "title": "Connect with New Customers",
+        "description": "Access new customers and build long-term relationships with healthcare institutions."
+      },
+      "analytics": {
+        "title": "Sales Analytics",
+        "description": "Get insights into your sales performance and market trends to make informed decisions."
+      }
+    }
+  },
+  "connectWithSuppliers": {
+    "badge": "Order with Delivery",
+    "title": "CONNECT WITH SUPPLIERS",
+    "description": "Order from trusted suppliers that support your hospital's procurement needs."
+  },
+  "orderManagement": {
+    "badge": "Dashboard",
+    "title": "Managing order is Easy!",
+    "description": "Track And Manage Your Hospital's Procurement Process With Tools Designed For Efficiency And Reliability.",
+    "features": {
+      "streamlined": "Streamlined Order Management.",
+      "access": "Access To A Wide Range Of Medical Products.",
+      "customized": "Customized Purchasing Options (Bid, Package, Or Co-Buying).",
+      "realtime": "Real-Time Updates And Detailed Tracking."
+    }
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Why Octobid?",
+    "description": "A bridge that simplifies how hospitals order from suppliers.",
+    "items": {
+      "verified": {
+        "title": "Verified Suppliers",
+        "description": "Access only trusted and vetted suppliers for reliable medical procurement."
+      },
+      "flexible": {
+        "title": "Flexible Buying Options",
+        "description": "Choose between individual products, packages, or co-buying to save costs."
+      },
+      "smart": {
+        "title": "Smart Management Tools",
+        "description": "Track orders, manage bids, and monitor sales performance all in one place."
+      },
+      "faster": {
+        "title": "Faster Sourcing",
+        "description": "Request products you can't find, and Octobid matches you with the right supplier quickly."
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "Our Proof",
+    "description": "Trusted by Hospitals and Suppliers Across the Network",
+    "items": {
+      "david": {
+        "metric": "8X",
+        "metricLabel": "99% Faster Procurement",
+        "quote": "With Octobid, our hospital sources critical equipment in just days instead of waiting weeks. The platform's verified suppliers give us complete confidence in quality and reliability, while the co-buying option has saved us thousands of dollars and strengthened collaboration with other healthcare providers. Beyond the savings, the transparency and ease of use have transformed the way we handle procurement. Our team spends less time on negotiations and more time focusing on patient care, knowing that Octobid delivers efficiency and trust at every step.",
+        "author": "David Callahan",
+        "role": "Procurement Lead, St. Paul's Hospital"
+      },
+      "sarah": {
+        "metric": "2X",
+        "metricLabel": "More Hospital Orders",
+        "quote": "Octobid connected us with hospitals we never had access to before. Our sales grew rapidly, and managing bids and packages is easier than ever.",
+        "author": "Sarah Mitchel",
+        "role": "Sales Manager, MedTech Supplies"
+      },
+      "tom": {
+        "quote": "We struggled to compare prices and suppliers before Octobid. Now, everything is centralized, transparent, and efficient.",
+        "author": "Tom Becker",
+        "role": "Operations, MedTech Supplies"
+      },
+      "danielle": {
+        "quote": "Octobid gave us a platform to showcase our products directly to hospitals. It has become an essential sales channel for us.",
+        "author": "Danielle Reyes",
+        "role": "Founder, CareMed Solutions"
+      }
+    }
+  },
+  "faqs": {
+    "badge": "FAQs",
+    "title": "Got Questions",
+    "description": "A spotlight on the most valued question from our audience.",
+    "hubBadge": "Faq Hub",
+    "stillHaveQuestions": "Still Have Questions?",
+    "contactUs": "Contact Us",
+    "contactDescription": ". We are happy to help you",
+    "getTheApp": "Get the App",
+    "items": {
+      "whatIs": {
+        "question": "What is Octobid",
+        "answer": "Octobid is a B2B platform designed to streamline the buying and selling of medical equipment and supplies. It connects suppliers directly with hospitals and healthcare providers, making the procurement process more efficient and transparent."
+      },
+      "targetAudience": {
+        "question": "Who is the target audience?",
+        "answer": "Our primary target audience includes hospitals, healthcare providers, medical suppliers, and procurement professionals in the healthcare industry who are looking for efficient ways to buy and sell medical equipment and supplies."
+      },
+      "uniquePoints": {
+        "question": "What are the unique selling points of the product?",
+        "answer": "Octobid offers verified suppliers, flexible buying options (individual products, packages, or co-buying), smart management tools, faster sourcing, and a streamlined procurement process that saves time and money for healthcare organizations."
+      },
+      "coBuying": {
+        "question": "How does co-buying work?",
+        "answer": "Co-buying allows multiple healthcare organizations to combine their purchasing power to get better prices on medical supplies. Organizations can join existing co-buying groups or create new ones, sharing costs and benefiting from bulk pricing discounts."
+      }
+    }
+  },
+  "footer": {
+    "description": "Octobid is a B2B platform designed to streamline the buying and selling of medical equipment and supplies.",
+    "about": {
+      "title": "About",
+      "aboutUs": "About Us",
+      "ourStory": "Our Story",
+      "careers": "Careers",
+      "blog": "Blog"
+    },
+    "company": {
+      "title": "Company",
+      "ourTeam": "Our Team",
+      "contactUs": "Contact Us",
+      "termsConditions": "Terms & Conditions",
+      "faq": "FAQ"
+    },
+    "contactUs": {
+      "title": "Contact Us",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "copyright": "© 2024 Octobid. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try again",
+    "close": "Close",
+    "open": "Open",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit"
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "headerDescription": "By accessing and using Octobid, you agree to be bound by the following Terms & Conditions. Please read them carefully.",
+    "introduction": {
+      "paragraph1": "By registering or placing an order on Octobid, you confirm that you are in agreement with these Terms & Conditions. These terms apply to the entire website, mobile app, and any related communication (including emails or notifications) between you and Octobid.",
+      "paragraph2": "Octobid shall not be liable for any direct, indirect, incidental, or consequential damages, including but not limited to, loss of profit, data, or business opportunities, arising from the use—or inability to use—our platform. If your use of Octobid's services results in the need for system servicing, data recovery, or equipment repair, you agree to assume any associated costs."
+    },
+    "license": {
+      "title": "License",
+      "paragraph1": "When you create or promote a product on Octobid, you are granted a limited, non-exclusive license to use our platform under these Terms. Ownership of digital assets, products, or promotional material uploaded by users remains with the respective owners, not Octobid.",
+      "paragraph2": "You agree not to copy, resell, or misuse any materials, resources, or data from Octobid without prior written consent."
+    },
+    "userResponsibilities": {
+      "title": "User Responsibilities",
+      "suppliers": {
+        "label": "For Suppliers/Companies:",
+        "description": "You are responsible for ensuring that the products or services you list are accurate."
+      },
+      "affiliates": {
+        "label": "For Affiliates:",
+        "description": "You agree to promote products ethically and comply with applicable advertising laws, avoiding false or misleading claims."
+      },
+      "allUsers": {
+        "label": "For All Users:",
+        "description": "You must not use Octobid for unlawful purposes, fraudulent activities, or anything that could harm the platform or its community."
+      }
+    },
+    "changes": {
+      "title": "Changes about terms",
+      "description": "If we change our terms of use we will post those changes on this page. Registered users will be sent an email that outlines changes made to the terms of use."
+    }
+  }
+}

@@ -1,10 +1,15 @@
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
 import FeatureElement from "./FeatureElement";
-import Image from "next/image";
 
-export default function Features() {
+export default async function Features() {
+  const t = await getTranslations("features");
   return (
-    <section className="relative flex flex-col items-center justify-center bg-white" id="features">
+    <section
+      className="relative flex flex-col items-center justify-center bg-white"
+      id="features"
+    >
       {/* LEFT radial background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div
@@ -27,17 +32,17 @@ export default function Features() {
               <div className="bg-[#284A9A] flex items-center justify-center rounded-full p-1">
                 <IoCartOutline className="w-5 h-5 text-white" />
               </div>
-              <span className="text-black font-semibold text-sm">Features</span>
+              <span className="text-black font-semibold text-sm">
+                {t("badge")}
+              </span>
             </div>
 
             <h2 className="text-center text-[clamp(28px,4vw,38px)] font-semibold tracking-tight text-slate-900">
-              Why Octobid?
+              {t("title")}
             </h2>
 
             <p className="mx-auto mt-3 max-w-[46ch] text-center text-[16px] leading-6 text-slate-600 font-medium">
-              A bridge that simplifies how hospitals order
-              <br />
-              from suppliers.
+              {t("description")}
             </p>
           </div>
 
@@ -45,19 +50,18 @@ export default function Features() {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 items-center  bg-[url('/images/bg_gradient1.svg')]  bg-position-[-10rem_-10] bg-cover bg-no-repeat">
             {/* LEFT TEXT COLUMN */}
 
-           
             <div className="text-left space-y-10">
               <FeatureElement
                 imageUrl="/images/verified_supplier.png"
-                title="Verified Suppliers"
-                description="Access only trusted and vetted suppliers for reliable medical procurement."
+                title={t("items.verified.title")}
+                description={t("items.verified.description")}
                 imageColor="#ffffff"
               />
 
               <FeatureElement
                 imageUrl="/images/flexible_buying.png"
-                title="Flexible Buying Options"
-                description="Choose between individual products, packages, or co-buying to save costs."
+                title={t("items.flexible.title")}
+                description={t("items.flexible.description")}
                 imageColor="#ffffff"
               />
             </div>
@@ -77,24 +81,19 @@ export default function Features() {
 
             {/* RIGHT TEXT COLUMN */}
             <div className="text-left space-y-10">
-
-                <FeatureElement
+              <FeatureElement
                 imageUrl="/images/smart_manage.png"
-                title="Smart Management Tools"
-                description="Track orders, manage bids, and monitor sales performance all
-                  in one place."
+                title={t("items.smart.title")}
+                description={t("items.smart.description")}
                 imageColor="#E9EDF8"
               />
 
               <FeatureElement
                 imageUrl="/images/faster_sourcing.png"
-                title="Faster Sourcing"
-                description="Request products you can&apos;t find, and Octobid matches you with
-                  the right supplier quickly."
+                title={t("items.faster.title")}
+                description={t("items.faster.description")}
                 imageColor="#E9EDF8"
               />
-             
-
             </div>
           </div>
         </div>

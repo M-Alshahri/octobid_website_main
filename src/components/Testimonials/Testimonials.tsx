@@ -1,47 +1,46 @@
 import { SlPeople } from "react-icons/sl";
 
+import { getTranslations } from "next-intl/server";
 import SectionTopPart from "../SectionTopPart";
 import QuoteMark from "./QuoteMark";
 import TestimonialAvatarInfo from "./TestimonialAvatarInfo";
 
-const testimonials = [
-  {
-    span: "big-left",
-    metric: "8X",
-    metricLabel: "99% Faster Procurement",
-    quote:
-      "With Octobid, our hospital sources critical equipment in days instead of waiting weeks.",
-    author: "David Callahan",
-    role: "Procurement Lead, St. Paul’s Hospital",
-    avatarUrl: "/images/avatar1.svg",
-    companyIcon: "/images/spotify.svg", 
-  },
-  {
-    metric: "2X",
-    metricLabel: "More Hospital Orders",
-    quote: "Octobid connected us with hospitals we never had access to before.",
-    author: "Sarah Mitchel",
-    role: "Sales Manager, MedTech Supplies",
-    avatarUrl: "/images/avatar2.svg",
-    companyIcon: "/images/google.svg",
-  },
-  {
-    quote:
-      "We struggled to compare prices and suppliers before Octobid — now it's effortless.",
-    author: "Tom Becker",
-    role: "Operations, MedTech Supplies",
-    avatarUrl: "/images/avatar3.svg",
-  },
-  {
-    quote:
-      "Octobid gave us a platform to showcase our products directly to hospitals.",
-    author: "Danielle Reyes",
-    role: "Founder, CareMed Solutions",
-    avatarUrl: "/images/avatar1.svg",
-  },
-];
+export default async function Testimonials() {
+  const t = await getTranslations("testimonials");
 
-export default function Testimonials() {
+  const testimonials = [
+    {
+      span: "big-left",
+      metric: t("items.david.metric"),
+      metricLabel: t("items.david.metricLabel"),
+      quote: t("items.david.quote"),
+      author: t("items.david.author"),
+      role: t("items.david.role"),
+      avatarUrl: "/images/avatar1.svg",
+      companyIcon: "/images/spotify.svg",
+    },
+    {
+      metric: t("items.sarah.metric"),
+      metricLabel: t("items.sarah.metricLabel"),
+      quote: t("items.sarah.quote"),
+      author: t("items.sarah.author"),
+      role: t("items.sarah.role"),
+      avatarUrl: "/images/avatar2.svg",
+      companyIcon: "/images/google.svg",
+    },
+    {
+      quote: t("items.tom.quote"),
+      author: t("items.tom.author"),
+      role: t("items.tom.role"),
+      avatarUrl: "/images/avatar3.svg",
+    },
+    {
+      quote: t("items.danielle.quote"),
+      author: t("items.danielle.author"),
+      role: t("items.danielle.role"),
+      avatarUrl: "/images/avatar1.svg",
+    },
+  ];
   return (
     <section
       className="relative flex flex-col items-center justify-center bg-white"
@@ -53,10 +52,10 @@ export default function Testimonials() {
 
           <SectionTopPart
             icon={<SlPeople className="w-5 h-5 text-white" />}
-            title1="Testimonials"
-            title2="Our Proof"
-            description1="Trusted by hospitals and Suppliers"
-            description2="Across the network"
+            title1={t("badge")}
+            title2={t("title")}
+            description1={t("description")}
+            description2=""
           />
 
           {/* ====== GRID RENDER ====== */}
@@ -160,6 +159,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  
-);
+  );
 }
