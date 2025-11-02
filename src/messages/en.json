@@ -188,6 +188,10 @@
     },
     "copyright": "© 2024 Octobid. All rights reserved."
   },
+  "notificationBar": {
+    "enabled": "true",
+    "message": "🚀 Welcome to Octobid Beta! We're in soft release - your feedback helps us improve. Report issues or suggestions to support@octobid.com"
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",

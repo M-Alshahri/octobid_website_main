@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import NotificationBar from "@/components/NotificationBar";
 import { getDirection, locales } from "@/i18n/request";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -26,12 +27,7 @@ const poppins = Poppins({
   display: "swap",
 });
 
-// You can add Arabic fonts here if needed
-// const arabicFont = localFont({
-//   src: "./fonts/NotoSansArabic-Regular.ttf",
-//   variable: "--font-arabic",
-//   display: "swap",
-// });
+
 
 type Props = {
   children: ReactNode;
@@ -66,6 +62,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased bg-white`}
       >
         <NextIntlClientProvider messages={messages}>
+          <NotificationBar />
           <Header />
           <main className="bg-white">{children}</main>
           <Footer />
