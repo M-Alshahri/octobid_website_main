@@ -79,7 +79,7 @@ export default function ConnectWithSuppliersSection({
         </div>
 
         {/* Orbital ring with logo and icons */}
-        <div className="relative mt-0 mx-auto aspect-square w-[min(86vw,560px)]">
+        <div className="relative mt-0 mx-auto aspect-square w-full max-w-[560px]">
           {/* Center logo */}
           <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 text-center">
             <Image

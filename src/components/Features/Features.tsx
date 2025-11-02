@@ -67,8 +67,8 @@ export default async function Features() {
             </div>
 
             {/* MIDDLE IMAGE PLACEHOLDER */}
-            <div className="mx-auto">
-              <div className="w-[370px] h-[600px] rounded-3xl bg-white shadow-2xl p-9">
+            <div className="mx-auto w-full max-w-[370px]">
+              <div className="w-full aspect-[370/600] rounded-3xl bg-white shadow-2xl p-9">
                 <Image
                   src="/images/features_center_image.png"
                   alt="Features Center Image"

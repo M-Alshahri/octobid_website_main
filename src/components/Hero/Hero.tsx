@@ -33,29 +33,34 @@ export default async function Hero() {
             </p>
 
             {/* App Store Buttons */}
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               {/* Google Play Button */}
-              <div className="flex items-center space-x-3 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow hover:shadow-md transition-shadow cursor-pointer">
+              <div className="flex items-center space-x-2 sm:space-x-3 bg-white border border-gray-200 rounded-lg px-3 sm:px-4 py-2 sm:py-3 shadow hover:shadow-md transition-shadow cursor-pointer flex-shrink-0">
                 <Image
                   src="/images/google_play.svg"
                   alt="Google Play"
                   width={24}
                   height={24}
+                  className="w-5 h-5 sm:w-6 sm:h-6"
                 />
                 <div>
-                  <div className="text-xs text-gray-400">Download on the</div>
-                  <div className="text-sm font-semibold text-gray-900">
+                  <div className="text-xs text-gray-400 whitespace-nowrap">
+                    Download on the
+                  </div>
+                  <div className="text-sm font-semibold text-gray-900 whitespace-nowrap">
                     {t("googlePlay")}
                   </div>
                 </div>
               </div>
 
               {/* Apple Store Button */}
-              <div className="flex items-center space-x-3 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow hover:shadow-md transition-shadow cursor-pointer">
-                <FaApple className="w-6 h-6 text-gray-800" />
+              <div className="flex items-center space-x-2 sm:space-x-3 bg-white border border-gray-200 rounded-lg px-3 sm:px-4 py-2 sm:py-3 shadow hover:shadow-md transition-shadow cursor-pointer flex-shrink-0">
+                <FaApple className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
                 <div>
-                  <div className="text-xs text-gray-400">Download on the</div>
-                  <div className="text-sm font-semibold text-gray-900">
+                  <div className="text-xs text-gray-400 whitespace-nowrap">
+                    Download on the
+                  </div>
+                  <div className="text-sm font-semibold text-gray-900 whitespace-nowrap">
                     {t("appStore")}
                   </div>
                 </div>

@@ -29,15 +29,15 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+        className="flex items-center space-x-1 md:space-x-2 px-2 md:px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
         aria-label="Switch language"
       >
-        <FaGlobe className="w-4 h-4 text-gray-600" />
-        <span className="text-sm font-medium text-gray-700">
+        <FaGlobe className="w-3.5 h-3.5 md:w-4 md:h-4 text-gray-600" />
+        <span className="text-xs md:text-sm font-medium text-gray-700 hidden sm:inline">
           {languageNames[locale as keyof typeof languageNames]}
         </span>
         <FaChevronDown
-          className={`w-3 h-3 text-gray-500 transition-transform ${
+          className={`w-2.5 h-2.5 md:w-3 md:h-3 text-gray-500 transition-transform hidden sm:inline ${
             isOpen ? "rotate-180" : ""
           }`}
         />

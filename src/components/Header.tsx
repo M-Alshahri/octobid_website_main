@@ -32,19 +32,19 @@ const Header = () => {
                 height={38}
                 className="w-8 h-9"
               />
-              <span className="text-lg sm:text-xl font-medium text-gray-900 font-poppins whitespace-nowrap">
+              <span className="hidden sm:block text-lg sm:text-xl font-medium text-gray-900 font-poppins whitespace-nowrap">
                 Octobid
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation - Show on medium screens and up */}
-          <nav className="hidden md:flex items-center space-x-1 xl:space-x-4">
+          <nav className="hidden md:flex items-center space-x-0.5 lg:space-x-1 xl:space-x-4">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-900 hover:text-blue-600 px-2 xl:px-3 py-2 text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                className="text-gray-900 hover:text-blue-600 px-1.5 lg:px-2 xl:px-3 py-2 text-xs lg:text-sm font-medium transition-colors duration-200 whitespace-nowrap"
               >
                 {item.name}
               </Link>
@@ -52,11 +52,11 @@ const Header = () => {
           </nav>
 
           {/* CTA Button and Language Switcher */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1.5 lg:space-x-2">
             <LanguageSwitcher />
             <Link
               href="/get-app"
-              className="bg-[#284A9A] text-white px-3 sm:px-4 xl:px-6 py-2 rounded-sm text-sm font-medium hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap"
+              className="bg-[#284A9A] text-white px-2.5 md:px-3 lg:px-4 xl:px-6 py-2 rounded-sm text-xs md:text-sm font-medium hover:bg-blue-700 transition-colors duration-200 whitespace-nowrap flex-shrink-0"
             >
               {t("getTheApp")}
             </Link>
