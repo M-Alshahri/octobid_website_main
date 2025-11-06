@@ -27,8 +27,6 @@ const poppins = Poppins({
   display: "swap",
 });
 
-
-
 type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
@@ -43,7 +41,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!locales.includes(locale as any)) {
+  if (!locales.includes(locale as (typeof locales)[number])) {
     notFound();
   }
 

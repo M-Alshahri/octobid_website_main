@@ -12,7 +12,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
   console.log("locale", locale);
 
   // Validate that the incoming `locale` parameter is valid
-  if (!locale || !locales.includes(locale as any)) notFound();
+  if (!locale || !locales.includes(locale as (typeof locales)[number]))
+    notFound();
 
   return {
     locale,
