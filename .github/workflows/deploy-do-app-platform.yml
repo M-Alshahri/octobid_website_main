@@ -1,0 +1,45 @@
+name: Deploy to DigitalOcean App Platform
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: do-app-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DO_APP_ID: ${{ secrets.DO_APP_ID }}
+
+jobs:
+  deploy:
+    name: Trigger DO App Platform deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_API_TOKEN }}
+
+      - name: Validate configuration
+        run: |
+          if [ -z "${DO_APP_ID}" ]; then
+            echo "ERROR: Missing DO_APP_ID secret. Add it in your repository settings." >&2
+            exit 1
+          fi
+
+      - name: Trigger deployment (wait until complete)
+        run: |
+          echo "Creating deployment for app: ${DO_APP_ID}"
+          doctl apps create-deployment "${DO_APP_ID}" --wait --verbose
+
+      - name: Show latest deployment status
+        run: |
+          doctl apps get "${DO_APP_ID}"
+
+
