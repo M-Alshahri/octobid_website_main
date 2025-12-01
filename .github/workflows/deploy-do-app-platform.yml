@@ -22,8 +22,8 @@ jobs:
       - name: Build and push Docker image to DOCR
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
-          file: ./backend/Dockerfile
+          context: ./
+          file: ./Dockerfile
           push: true
           tags: registry.digitalocean.com/octobidapi/octobid-web:latest
       - name: Deploy to DigitalOcean App Platform
