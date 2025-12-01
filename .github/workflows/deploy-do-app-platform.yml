@@ -30,4 +30,4 @@ jobs:
         uses: digitalocean/app_action@v1.1.5
         with:
           app_name: octobid-main-website
-          token: ${{ secrets.DO_TOKEN }}
+          token: ${{ secrets.DIGITALOCEAN_API_TOKEN }}
