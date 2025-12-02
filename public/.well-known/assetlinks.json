@@ -11,18 +11,6 @@
 
       ]
     }
-  },
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.octobid_client.octobid_client_app",
-      "sha256_cert_fingerprints": [
-        "88:B3:DC:69:F8:CC:49:4F:B8:D5:7B:48:86:12:E6:E4:D5:F8:10:6F:11:BD:4D:20:F3:DA:4B:52:82:96:09:0F",
-        "AC:C0:11:95:AA:1C:EB:16:49:4D:BB:EA:5D:10:35:A7:5D:10:B2:23:B5:B1:2F:18:BE:6A:D5:9E:51:2A:08:DB",
-        "4C:86:C4:0A:76:FE:98:F9:40:2F:C2:6D:B1:68:2A:5C:D7:C0:5F:18:1A:F3:EA:00:67:15:B4:19:6F:5D:D7:67"
-
-      ]
-    }
   }
+ 
 ]
